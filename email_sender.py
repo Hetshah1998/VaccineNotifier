@@ -9,7 +9,7 @@ logger = logging.getLogger('Sender')
 
 def load_template(name, pincode, locations, date):
     # print(os.path.join(os.path.dirname(os.path.abspath(__file__)), "vaccine_notifier/templates"))
-    template_loader = jinja2.FileSystemLoader("vaccine_notifier/templates")
+    template_loader = jinja2.FileSystemLoader("VaccineNotifier/templates")
     template_env  = jinja2.Environment(loader=template_loader)
     template = template_env.get_template('vaccine_email.html')
     return template.render(pincode=pincode, name=name, slots=locations, date=date)

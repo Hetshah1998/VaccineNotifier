@@ -13,12 +13,11 @@ dates = get_5days()
 
 logger.info("Processing Started..")
 
-with open(os.path.join(os.path.dirname(__file__), "users.json")) as users:
-    user_details = json.loads(users.read())
-
 done_users = set()
 
 while True:
+    with open(os.path.join(os.path.dirname(__file__), "users.json")) as users:
+        user_details = json.loads(users.read())
     for user in user_details:
         if user['userName'] in done_users:
             continue
