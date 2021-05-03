@@ -5,6 +5,7 @@ notifies the user about availbility of vaccine
 Python version 3
 
 # Command
-```pip install -r requirements.txt
-   python -m VaccineNotifier
-```unix
+```
+pip install -r requirements.txt
+python -m VaccineNotifier
+```
