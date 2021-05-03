@@ -6,6 +6,6 @@ Python version 3
 
 # Command
 ```
-pip install -r requirements.txt
+pip install -r requirement.txt
 python -m VaccineNotifier
 ```
