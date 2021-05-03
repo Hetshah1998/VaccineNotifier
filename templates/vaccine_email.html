@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+</style>
+<body>
+    Greetings {{name}}, Vaccine is available in your pincode on date: {{date}} <br/>
+    kindly register on cowin website(<a href="https://www.cowin.gov.in/home">Link</a>)
+
+    <table>
+        <tr >
+            <th>Name</th>
+            <th>State</th>
+            <th>District</th>
+            <th>Block Name</th>
+            <th>Fees</th>
+            <th>Date</th>
+            <th>Capacity</th>
+            <th>Vaccine Name</th>
+        </tr>
+    {% for slot in slots %}
+       <tr>
+           <td>{{slot['name']}}</td>
+           <td>{{slot['state_name']}}</td>
+           <td>{{slot['district_name']}}</td>
+           <td>{{slot['block_name']}}</td>
+           <td>{{slot['fee_type']}}</td>
+           <td>{{slot['date']}}</td>
+           <td>{{slot['available_capacity']}}</td>
+           <td>{{slot['vaccine']}}</td>
+       </tr> 
+    {% endfor %}
+    </table>
+</body>
+</html>
